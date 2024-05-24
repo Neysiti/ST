@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Token</title>
+    <link rel="stylesheet" href="./styles.css"> <!-- Підключаємо CSS-файл -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <script src="script.js"></script> <!-- Підключаємо JavaScript-файл -->
+    <div class="logo">
+        <a href="/index.html">
+            <img src="media/media/stlogo.png" alt="Sleep Token Logo"> <!--посилання на свій логотип -->
+        </a>
+    </div>
+    <div class="video-container">
+        <video autoplay muted loop disablepictureinpicture id="background-video">
+            <source src="media/media/video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.getElementById('background-video');
+            video.currentTime = 60; // 60 секунд (1 хвилина)
+            // або video.currentTime = 120; для 2-ї хвилини
+        });
+    </script>
+    <div class="navigation">
+        <button1 onclick="window.location.href = 'albums.html';">ALBUMS</button1>
+        <button2>MERCH</button2>
+        <button3 onclick="window.location.href = 'tours.html';">TOURS AND CONCERTS</button3>
+    </div>
+    <div class="title">
+        <h1>ABOUT THE BAND</h1>
+    </div>
+    <div class="foto-container">
+        <img class="photo first" src="media/media/Vessel2.png" alt="Vessel2">
+        <img class="photo second" src="media/media/Vessel3.png" alt="Vessel3">
+        <img class="photo third" src="media/media/Vessel4.png" alt="Vessel4">
+        <figcaption>Vessel</figcaption>
+        <div class="text-container">
+            <h2>Sleep Token are a British rock band from London, formed in 2016.</h2>
+            <p>The group are an anonymous, masked collective led by a frontman using the moniker Vessel. 
+                They have been categorised under many different genres, including alternative metal, post-rock/metal, progressive metal and indie rock/pop.
+                After self-releasing their debut extended play (EP) One in 2016, the band signed with Basick Records and issued a follow-up, Two, the next year.
+            </p>
+            <p>The group later signed with Spinefarm Records and released their debut full-length album Sundowning in 2019, which was followed in 2021 by This Place Will Become Your Tomb. 
+                A third album, Take Me Back to Eden, was released in May 2023.
+            </p>
+        </div>
+    </div>
+    <div class="title2">
+        <h3>COMPOSITION OF THE BAND</h3>
+    </div>
+    <div class="foto-container2">
+        <img class="photo first" src="media/media/II.png" alt="II">
+        <img class="photo second" src="media/media/II.2.png" alt="II2">
+        <img class="photo third" src="media/media/II.3.png" alt="II3">
+        <figcaption>II-Drums</figcaption>
+    </div>
+    <div class="foto-container3">
+        <img class="photo first" src="media/media/III.png" alt="III">
+        <img class="photo second" src="media/media/III.2.png" alt="III2">
+        <img class="photo third" src="media/media/III.3.png" alt="III3">
+        <figcaption>III-Bass</figcaption>
+    </div>
+    <div class="foto-container4">
+        <img class="photo first" src="media/media/iv.png" alt="IV">
+        <img class="photo second" src="media/media/iv.2.png" alt="IV2">
+        <img class="photo third" src="media/media/iv.3.png" alt="IV3">
+        <figcaption>IV-Guitar</figcaption>    
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>© 2024 Sleep Token. All rights reserved</p>
+            </div>
+            <div class="footer-logo">
+                <img src="/media/media/stlogo2.png" alt="Logo">
+            </div>
+            <div class="footer-right">
+                <a href="https://twitter.com/Sleep_Token" target="_blank">
+                    <img src="/media/media/free-icon-twitter-sign-25347.png" alt="twitter">
+                </a>
+                <a href="https://music.youtube.com/channel/UCjS9WiKfJgltFPDecfIHtDg?si=nJgJ2D22HDY-kWju" target="_blank">
+                    <img src="/media/media/youtube.png" alt="youtube">
+                </a>
+                <a href="https://www.instagram.com/sleep_token/?hl=en" target="_blank">
+                    <img src="/media/media/free-icon-instagram-logo-87390.png" alt="inst">
+                </a>
+                <a href="https://www.facebook.com/sleeptoken" target="_blank">
+                    <img src="/media/media/free-icon-facebook-3536423.png" alt="Facebook">
+                </a>
+            </div>
+        </div>
+     </footer> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</body>
+</html>

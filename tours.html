@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Token</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Підключаємо CSS-файл -->
+    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.css">
+    <script src="https://kit.fontawesome.com/43ca26a1d5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <script src="script.js"></script> <!-- Підключаємо JavaScript-файл -->
+    <div class="logo">
+        <a href="/index.html">
+            <img src="media/media/stlogo.png" alt="Sleep Token Logo"> <!--посилання на свій логотип -->
+        </a>
+    </div>
+    <div class="video-container">
+        <video autoplay muted loop disablepictureinpicture id="background-video">
+            <source src="media/media/video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.getElementById('background-video');
+            video.currentTime = 60; // 60 секунд (1 хвилина)
+            // або video.currentTime = 120; для 2-ї хвилини
+        });
+    </script>
+ <div class="videotours">
+    <video autoplay muted loop disablepictureinpicture
+        src="media/media/videotour.mp4">
+    </video>
+</div>
+<div class="texttours">
+    <h1>TOURS AND CONCERTS</h1>
+    <p>April 27 - Las Vegas, Nev. @ Sick New World<br>
+    April 30 - Phoenix, Ariz. @ Arizona Financial Theatre<br>
+        May 1 - Albuquerque, N.M. @ Revel<br>
+        May 3 - Austin, Texas @ H.E.B. Center at Cedar Park<br>
+        May 4 - Dallas, Texas @ Toyota Music Factory<br>
+        May 6 - Tampa, Fla. @ Yeungling Center<br>
+        May 7 - Atlanta, Ga. @ Coca-Cola Roxy<br>
+        May 8 - Asheville, N.C. @ ExploreAsheville.com Arena<br>
+        May 10 - St. Louis, Mo. @ The Factory<br>
+        May 12 - Denver, Colo. @ Red Rocks Amphitheatre<br>
+        May 14 - Des Moines, Iowa @ Vibrant Music Hall<br>
+        May 15-16 - Chicago, Ill. @ Salt Shed<br>
+        May 18 - Columbus, Ohio @ Sonic Temple<br>
+        May 19 - Pittsburgh, Pa. @ Petersen Events Center<br>
+        May 20 - Philadelphia, Pa. @ The Met<br>
+        May 22 - New York, N.Y. @ Radio City Music Hall<br>
+        May 24 - Boston, Mass. @ MGM Music Hall at Fenway<br>
+        May 25 - Montreal, Quebec @ Place Bell<br>
+        May 27-28 Toronto, Ontario @ Massey Hall</p>
+        <a href="https://www.sleep-token.com/live/">You can buy tickets online on the official website.<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+</div>
+<footer class="footer2">
+    <div class="footer-content">
+        <div class="footer-left">
+            <p>© 2024 Sleep Token. All rights reserved</p>
+        </div>
+        <div class="footer-logo">
+            <img src="/media/media/stlogo2.png" alt="Logo">
+        </div>
+        <div class="footer-right">
+            <a href="https://twitter.com/Sleep_Token" target="_blank">
+                <img src="/media/media/free-icon-twitter-sign-25347.png" alt="twitter">
+            </a>
+            <a href="https://music.youtube.com/channel/UCjS9WiKfJgltFPDecfIHtDg?si=nJgJ2D22HDY-kWju" target="_blank">
+                <img src="/media/media/youtube.png" alt="youtube">
+            </a>
+            <a href="https://www.instagram.com/sleep_token/?hl=en" target="_blank">
+                <img src="/media/media/free-icon-instagram-logo-87390.png" alt="inst">
+            </a>
+            <a href="https://www.facebook.com/sleeptoken" target="_blank">
+                <img src="/media/media/free-icon-facebook-3536423.png" alt="Facebook">
+            </a>
+        </div>
+    </div>
+ </footer>
+</body>
+</html>

@@ -1,0 +1,835 @@
+*{
+    scrollbar-width: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    align-items: center;
+    background-color: beige;
+    overflow: visible;
+    margin: 0;
+    padding: 0; 
+}
+.body-wrapper {
+    transform: translateX(20px);
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.logo img {
+    align-items: center;
+    max-width: 700px; 
+    max-height: 400px;
+}
+
+.logo {
+    align-items: center;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Додаємо тінь */
+    height: 300px;
+    width: 2000px;
+    text-align: center;
+}
+
+.navigation {
+    position: absolute;
+    top: calc(25% + 30px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    width: 50%;
+}
+.navigation button {
+    margin: 0 10px;
+}
+.navigation button1 {
+    padding: 140px 135px; /* Фіксований розмір кнопки */
+    background-color: gray;
+    color: beige;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: "SourceSansPro-Regular", sans-serif;
+    cursor: pointer;
+    background-image: url('media/media/1.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background 0.3s ease;
+}
+
+.navigation button1:hover {
+    background-image: url('media/media/2.jpg');
+    background-position: center bottom;
+}
+
+.navigation button2 {
+    padding: 140px 70px; /* Фіксований розмір кнопки */
+    background-color: gray;
+    color: beige;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-family: "SourceSansPro-Regular", sans-serif;
+    cursor: pointer;
+    background-image: url('media/media/Merch3.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background 0.3s ease;
+}
+.navigation button2:hover {
+    background-image: url('media/media/Merch4.jpg');
+    background-position: center bottom;
+}
+
+.navigation button3 {
+    padding: 140px 70px; /* Фіксований розмір кнопки */
+    background-color: gray;
+    color: beige;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-left: auto;
+    font-family: "SourceSansPro-Regular", sans-serif;
+    cursor: pointer;
+    background-image: url('media/media/girls3.png');
+    background-size: cover;
+    background-position: center;
+    transition: background 0.3s ease;
+}
+
+.navigation button3:hover {
+    background-image: url('media/media/girls2.png');
+    background-position: center bottom;
+}
+
+.title {
+    text-align: center; /* Вирівнюємо текст по центру */
+    margin-top: 800px; /* Відступ від кнопок навігації */
+}
+
+.title h1 {
+    font-size: 48px; /* Розмір шрифту заголовка */
+    color: beige; /* Колір тексту */
+    /* Інші стилі за бажанням */
+}
+
+.foto-container {
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    height: 600px; /* Висота фото контейнера */
+    margin-top: 100px; /* Відстань від верхнього краю */
+    margin-bottom: 40px; /* Відстань від нижнього краю */
+    margin-left: 460px; /* Автоматичне розташування від лівого краю */
+    margin-right: auto; /* Автоматичне розташування від правого краю */
+}
+
+.photo {
+    position: absolute;
+    top: 50px; /* Відстань від верхнього краю фото контейнера */
+    left: 10px; /* Відстань від лівого краю фото контейнера */
+    width: calc(50% - 140px); /* Ширина фото контейнера - 20px від лівого та правого краю */
+    height: calc(90% - 70px); /* Висота фото контейнера - 20px від верхнього та нижнього краю */
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Додаємо тінь */
+    border-radius: 10px; /* Заокруглення кутів */
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.first {
+    opacity: 1; /* Зробіть перше фото видимим */
+}
+
+/* Анімація для зміни видимості фото */
+@keyframes changePhoto {
+    0% {
+        opacity: 0;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    66.66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Запуск анімації для кожного фото */
+.first {
+    animation: changePhoto 9s infinite;
+}
+.second {
+    animation: changePhoto 9s infinite 3s; /* Почніть друге фото через 3 секунди */
+}
+.third {
+    animation: changePhoto 9s infinite 6s; /* Почніть третє фото через 6 секунд */
+}
+
+figcaption {
+    position: absolute;
+    bottom: 90px; /* Відстань від нижнього краю */
+    left: 140px; /* Відстань від лівого краю */
+    color: beige; /* Колір тексту */
+    background-color: rgba(0, 0, 0, 0.5); /* Прозорий фон */
+    padding: 5px 10px; /* Відступи від тексту */
+    border-radius: 5px; /* Заокруглення кутів */
+}
+.text-container {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 425px;
+    margin-right: 0px;
+    color: beige;
+    margin-top: -35px;
+    line-height: 1.5; /* Збільшення відстані між рядками */
+}
+
+.text-container p {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.title2 {
+    text-align: center; /* Вирівнюємо текст по центру */
+    margin-top: 40px; /* Відступ від кнопок навігації */
+}
+
+.title2 h3 {
+    font-size: 48px; /* Розмір шрифту заголовка */
+    color: beige; /* Колір тексту */
+    /* Інші стилі за бажанням */
+}
+.foto-container2 {
+    position: absolute;
+    overflow: hidden;
+    width: 50%;
+    height: 600px; /* Висота фото контейнера */
+    margin-top: 30px; /* Відстань від верхнього краю */
+    margin-bottom: 40px; /* Відстань від нижнього краю */
+    margin-left: 420px; /* Автоматичне розташування від лівого краю */
+    margin-right: 0px; /* Автоматичне розташування від правого краю */
+}
+
+.photo {
+    position: absolute;
+    top: 50px; /* Відстань від верхнього краю фото контейнера */
+    left: 10px; /* Відстань від лівого краю фото контейнера */
+    width: calc(50% - 140px); /* Ширина фото контейнера - 20px від лівого та правого краю */
+    height: calc(90% - 70px); /* Висота фото контейнера - 20px від верхнього та нижнього краю */
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Додаємо тінь */
+    border-radius: 10px; /* Заокруглення кутів */
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.first {
+    opacity: 1; /* Зробіть перше фото видимим */
+}
+
+/* Анімація для зміни видимості фото */
+@keyframes changePhoto {
+    0% {
+        opacity: 0;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    66.66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Запуск анімації для кожного фото */
+.first {
+    animation: changePhoto 9s infinite;
+}
+.second {
+    animation: changePhoto 9s infinite 3s; /* Почніть друге фото через 3 секунди */
+}
+.third {
+    animation: changePhoto 9s infinite 6s; /* Почніть третє фото через 6 секунд */
+}
+
+figcaption {
+    position: center;
+    bottom: 90px; /* Відстань від нижнього краю */
+    left: 140px; /* Відстань від лівого краю */
+    color: beige; /* Колір тексту */
+    background-color: rgba(0, 0, 0, 0.5); /* Прозорий фон */
+    padding: 5px 10px; /* Відступи від тексту */
+    border-radius: 5px; /* Заокруглення кутів */
+}
+
+.foto-container3 {
+    position: absolute;
+    overflow: hidden;
+    width: 50%; /* Встановлюємо ширину контейнера на 50% */
+    height: 600px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 765px;
+}
+
+.photo {
+    position: absolute;
+    top: 10px; /* Відстань від верхнього краю фото контейнера */
+    left: 10px; /* Відстань від лівого краю фото контейнера */
+    width: calc(50% - 140px); /* Ширина фото контейнера - 20px від лівого та правого краю */
+    height: calc(90% - 70px); /* Висота фото контейнера - 20px від верхнього та нижнього краю */
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Додаємо тінь */
+    border-radius: 10px; /* Заокруглення кутів */
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.first {
+    opacity: 1; /* Зробіть перше фото видимим */
+}
+
+/* Анімація для зміни видимості фото */
+@keyframes changePhoto {
+    0% {
+        opacity: 0;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    66.66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Запуск анімації для кожного фото */
+.first {
+    animation: changePhoto 9s infinite;
+}
+.second {
+    animation: changePhoto 9s infinite 3s; /* Почніть друге фото через 3 секунди */
+}
+.third {
+    animation: changePhoto 9s infinite 6s; /* Почніть третє фото через 6 секунд */
+}
+
+figcaption {
+    position: center;
+    bottom: 125px; /* Відстань від нижнього краю */
+    left: 140px; /* Відстань від лівого краю */
+    color: beige; /* Колір тексту */
+    background-color: rgba(0, 0, 0, 0.5); /* Прозорий фон */
+    padding: 5px 10px; /* Відступи від тексту */
+    border-radius: 5px; /* Заокруглення кутів */
+}
+
+.foto-container4 {
+    position: absolute;
+    overflow: hidden;
+    width: 50%; /* Встановлюємо ширину контейнера на 50% */
+    height: 600px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 1110px; 
+}
+
+.photo {
+    position: absolute;
+    top: 10px; /* Відстань від верхнього краю фото контейнера */
+    left: 10px; /* Відстань від лівого краю фото контейнера */
+    width: calc(50% - 140px); /* Ширина фото контейнера - 20px від лівого та правого краю */
+    height: calc(90% - 70px); /* Висота фото контейнера - 20px від верхнього та нижнього краю */
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Додаємо тінь */
+    border-radius: 10px; /* Заокруглення кутів */
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.first {
+    opacity: 1; /* Зробіть перше фото видимим */
+}
+
+/* Анімація для зміни видимості фото */
+@keyframes changePhoto {
+    0% {
+        opacity: 0;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    66.66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Запуск анімації для кожного фото */
+.first {
+    animation: changePhoto 9s infinite;
+}
+.second {
+    animation: changePhoto 9s infinite 3s; /* Почніть друге фото через 3 секунди */
+}
+.third {
+    animation: changePhoto 9s infinite 6s; /* Почніть третє фото через 6 секунд */
+}
+
+figcaption {
+    position: center;
+    bottom: 125px; /* Відстань від нижнього краю */
+    left: 140px; /* Відстань від лівого краю */
+    color: beige; /* Колір тексту */
+    background-color: rgba(0, 0, 0, 0.5); /* Прозорий фон */
+    padding: 5px 10px; /* Відступи від тексту */
+    border-radius: 5px; /* Заокруглення кутів */
+}
+
+.footer { 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    margin-top: 600px;
+} 
+
+.footer-content { 
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left p {
+    color: beige;
+    font-size: 20px;
+}
+
+.footer-logo img {
+    height: 100px;
+    width: auto;
+    margin-right: 30px;
+}
+
+.footer-right img { 
+    display: inline-block;
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    color: beige;
+    height: 50px;
+    width: 50px;
+    position: relative;
+ }
+
+/* =========ALBUMS========= */
+
+.album-page { 
+    text-align: flex;
+    margin-left: 450px;
+    margin-top: 300px;
+ } 
+
+.album {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.album-cover {
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.album-cover-small {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.album:hover .album-cover {
+    transform: scale(1.05);
+}
+
+.album-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: gray;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.album.open .album-content {
+    display: flex;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.album.open .album-cover {
+    transform: translateX(-150px); /* Зміщення обкладинки вліво */
+}
+
+.album.open .tracks,
+.album.open .album-cover-small {
+    transform: translateX(10px); /* Зміщення треків і малої обкладинки вправо */
+}
+
+.tracks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.5s ease;
+}
+
+.album-info {
+    display: flex;
+    margin-top: -350px;
+    margin-left: 500px;
+    margin-right: 450px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: beige;
+    font-size: 20px;
+}
+
+.album-info2 {
+    display: flex;
+    text-align: center;
+    margin-right: 450px;
+    color: beige;
+    font-size: 20px;
+}
+
+.carousel-container {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 470px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 80%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-button {
+    background: none;
+    border: none;
+    color: beige;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.carousel-button.prev {
+    left: 20px;
+}
+
+.carousel-button.next {
+    right: 20px;
+}
+
+.album-page2 { 
+    text-align: flex;
+    margin-left: 450px;
+    margin-top: 100px;
+ } 
+
+.album2 {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.album-cover2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.album-cover-small2 {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.album2:hover .album-cover2 {
+    transform: scale(1.05);
+}
+
+.album-content2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: gray;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.album2.open2 .album-content2 {
+    display: flex;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.album2.open2 .album-cover2 {
+    transform: translateX(-150px); /* Зміщення обкладинки вліво */
+}
+
+.album2.open2 .tracks2,
+.album2.open2 .album-cover-small2 {
+    transform: translateX(10px); /* Зміщення треків і малої обкладинки вправо */
+}
+
+.tracks2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.5s ease;
+}
+
+.album-info H {
+    display: flex;
+    margin-top: -350px;
+    margin-left: 500px;
+    margin-right: 450px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: beige;
+    font-size: 20px;
+}
+
+.album-page3 { 
+    text-align: right;
+    margin-right: 450px;
+    margin-top: 100px;
+ } 
+
+.album3 {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.album-cover3 {
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.album-cover-small3 {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.album3:hover .album-cover3 {
+    transform: scale(1.05);
+}
+
+.album-content3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: gray;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.album3.open3 .album-content3 {
+    display: flex;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.album3.open3 .album-cover3 {
+    transform: translateX(150px); /* Зміщення обкладинки вліво */
+}
+
+.album3.open3 .tracks3,
+.album3.open3 .album-cover-small3 {
+    transform: translateX(-10px); /* Зміщення треків і малої обкладинки вправо */
+}
+
+.tracks3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.5s ease;
+}
+
+.album-infoT {
+    display: left;
+    margin-top: -350px;
+    margin-left: 450px;
+    margin-right: 500px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: beige;
+    font-size: 20px;
+}
+
+.footer2 { 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    margin-top: 100px;
+} 
+
+.footer-content { 
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left p {
+    color: beige;
+    font-size: 20px;
+}
+
+.footer-logo img {
+    height: 100px;
+    width: auto;
+    margin-right: 30px;
+}
+
+.footer-right img { 
+    display: inline-block;
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    color: beige;
+    height: 50px;
+    width: 50px;
+    position: relative;
+ }
+
+ /* ============TOURS========== */
+ 
+ .videotours {
+    display: flex;
+    margin: 250px;
+    margin-bottom: 0;
+    bottom: 0;
+    margin-left: 490px;
+    height: 500px;
+    width: 500px;
+}
+
+.texttours {
+    display: flex;
+    text-align: center;
+    margin: 10px;
+    color: beige;
+    font-size: 20px;
+    flex-direction: column;
+}
+a {
+    color: beige;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }

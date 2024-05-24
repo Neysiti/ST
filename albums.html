@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums - Sleep Token</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Підключаємо CSS-файл -->
+</head>
+<body>
+    <div class="logo">
+        <a href="/index.html">
+            <img src="media/media/stlogo.png" alt="Sleep Token Logo"> <!--посилання на свій логотип -->
+        </a>
+    </div>
+    <div class="video-container">
+        <video autoplay muted loop disablepictureinpicture id="background-video">
+            <source src="media/media/video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.getElementById('background-video');
+            video.currentTime = 60; // 60 секунд (1 хвилина)
+        });
+    </script>
+    <div class="album-page">
+        <div class="album" onclick="toggleAlbum()">
+            <img src="media/media/1.jpg" alt="Album Cover" class="album-cover">
+            <div class="album-content">
+                <img src="media/media/1.jpg" alt="Album Cover Small" class="album-cover-small"> <!-- Додали нову обкладинку -->
+                <div class="tracks">
+                    <audio controls>
+                        <source src="media/media/Sleep Token The Apparition.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="media/media/y2mate.com - Rain.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="media/media/Sleep Token Take Me Back To Eden.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div class="album-info">
+            <h2>Album: TAKE ME BACK TO EDEN</h2>
+            <p>Release Date: May 19, 2023</p>
+            <p>Genre: Alternative Metal, Progressive Metal</p>
+            <p>Label: Spinefarm Records</p>
+            <p>Description: This album takes you on a journey through a rich soundscape of progressive and alternative metal, featuring deep, introspective lyrics and intricate musical arrangements.</p>
+        </div>
+        <div class="album-info2">
+            <p>In March 2023, Sleep Token were nominated for Best UK Artist at the Heavy Music Awards. 
+                The band were also booked to perform at that year's summer festivals, including Graspop Metal Meeting in Belgium, Wacken Open Air in Germany, and Reading and Leeds Festivals in the UK. 
+                In May 2023, Sleep Token won the Best UK Artist award at the Heavy Music Awards. In the same month, the band announced a standalone headline show at Wembley Arena, which is scheduled for December 2023. 
+                The Wembley Arena show sold out within 10 minutes of the tickets going on general sale. During the show, the band revealed new masks to indicate the band entering a "new era".</p>
+        </div> 
+    </div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide"><img src="media/media/consert1.png" alt="Concert 1"></li>
+                    <li class="carousel-slide"><img src="media/media/consert3.png" alt="Concert 2"></li>
+                    <li class="carousel-slide"><img src="media/media/consert4.png" alt="Concert 3"></li>
+                    <li class="carousel-slide"><img src="media/media/consert5.png" alt="Concert 4"></li>
+                    <li class="carousel-slide"><img src="media/media/consert6.png" alt="Concert 5"></li>
+                    <li class="carousel-slide"><img src="media/media/consert7.png" alt="Concert 6"></li>
+                    <li class="carousel-slide"><img src="media/media/consert8.png" alt="Concert 7"></li>
+                    <li class="carousel-slide"><img src="media/media/consert9.png" alt="Concert 8"></li>
+                    <li class="carousel-slide"><img src="media/media/consert10.png" alt="Concert 9"></li>
+                    <li class="carousel-slide"><img src="media/media/consert2.png" alt="Concert 10"></li>
+                </ul>
+            </div>
+            <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
+    <div class="album-page2">
+        <div class="album2" onclick="toggleAlbum2()">
+            <img src="media/media/2.jpg" alt="Album Cover" class="album-cover2">
+            <div class="album-content2">
+                <img src="media/media/2.jpg" alt="Album Cover Small" class="album-cover-small2"> <!-- Додали нову обкладинку -->
+                <div class="tracks2">
+                    <audio controls>
+                        <source src="media/media/Atlantic.m4a" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="media/media/Hypnosis.m4a" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="media/media/Alkaline.m4a" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div class="album-info H">
+            <h2>Album: THIS PLACE WILL BECOME YOUR TOMB</h2>
+            <p>Release Date: September 24, 2021</p>
+            <p>Genre: Alternative Metal, Progressive Metal</p>
+            <p>Label: Spinefarm Records</p>
+            <p>Description: This place will become your tomb".The phrase evokes a sense of foreboding and danger, hinting at a scenario where escape or survival may be unlikely. 
+                It's the kind of line that sends shivers down your spine and raises the tension level in a story.</p>
+        </div>
+    </div>
+    <div class="album-page3">
+        <div class="album3" onclick="toggleAlbum3()">
+            <img src="media/media/3.jpg" alt="Album Cover" class="album-cover3">
+            <div class="album-content3">
+                <img src="media/media/3.jpg" alt="Album Cover Small" class="album-cover-small3"> <!-- Додали нову обкладинку -->
+                <div class="tracks3">
+                    <audio controls>
+                        <source src="media/media/The Offering.m4a" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="media/media/Gods.m4a" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <audio controls>
+                        <source src="media/media/Blood Sport.m4a" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div class="album-infoT">
+            <h2>Album: SUNDOWNING</h2>
+            <p>Release Date: November 21, 2019</p>
+            <p>Genre: Alternative Metal, Progressive Metal</p>
+            <p>Label: Spinefarm Records</p>
+            <p>Description: "SUNDOWNING" is the debut studio album by the British band Sleep Token. 
+                The album explores themes of spirituality, identity, and emotional vulnerability, with haunting melodies, intricate instrumentation, and powerful vocals.</p>
+        </div>
+    </div>
+    <footer class="footer2">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>© 2024 Sleep Token. All rights reserved</p>
+            </div>
+            <div class="footer-logo">
+                <img src="/media/media/stlogo2.png" alt="Logo">
+            </div>
+            <div class="footer-right">
+                <a href="https://twitter.com/Sleep_Token" target="_blank">
+                    <img src="/media/media/free-icon-twitter-sign-25347.png" alt="twitter">
+                </a>
+                <a href="https://music.youtube.com/channel/UCjS9WiKfJgltFPDecfIHtDg?si=nJgJ2D22HDY-kWju" target="_blank">
+                    <img src="/media/media/youtube.png" alt="youtube">
+                </a>
+                <a href="https://www.instagram.com/sleep_token/?hl=en" target="_blank">
+                    <img src="/media/media/free-icon-instagram-logo-87390.png" alt="inst">
+                </a>
+                <a href="https://www.facebook.com/sleeptoken" target="_blank">
+                    <img src="/media/media/free-icon-facebook-3536423.png" alt="Facebook">
+                </a>
+            </div>
+        </div>
+     </footer>   
+    <script src="script.js"></script> <!-- Підключаємо JavaScript-файл -->
+</body>
+</html>
